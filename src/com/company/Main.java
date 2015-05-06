@@ -11,7 +11,7 @@ public class Main {
             String fileName = args[1];
             File file = new File("D:/MyProjects/FileManager/"+fileName);
             file.createNewFile();
-            System.out.println("װאיכ "+args[1]+"סמחהאם.");
+            System.out.println("װאיכ "+args[1]+" סמחהאם.");
         }
 
 
