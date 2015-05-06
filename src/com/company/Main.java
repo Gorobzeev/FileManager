@@ -13,6 +13,8 @@ public class Main {
             file.createNewFile();
             System.out.println("Файл "+args[1]+"создан.");
         }
+
+
         else if (args[0].equals("delete")){
             File dir = new File(args[1]);
             if (dir.isDirectory()){
@@ -39,7 +41,24 @@ public class Main {
             System.out.println("Файл "+args[1]+" удален.");
             return;
         }
-        else if (args[0].equals("renamme")){
+
+
+        else if (args[0].equals("rename")){
+            File dir = new File(args[1]);
+            File name = new File(args[2]);
+            if (dir.renameTo(name)){
+                System.out.println("Файл переименован.");
+                return;
+            }
+            else {
+                System.out.println("Файл не переименован");
+                return;
+            }
+        }
+
+        else {
+            System.out.println("Команда введена не правильно, повторите ввод");
+            return;
 
         }
     }
